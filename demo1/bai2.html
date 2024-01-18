@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkMax(arr){
+            let maxLength=0; 
+            let max;
+            for(let i=0;i<arr.length;i++){
+                if(maxLength<arr[i].length){
+                    maxLength=arr[i].length;
+                    max=arr[i];
+                }
+            }
+            return max ;
+        }
+    var array=["12","fdhth",344556,"f","123456754","456","5978656433"];
+    console.log("phan tu dai nhat trong mang :",checkMax(array));
+    </script>
+</body>
+</html>

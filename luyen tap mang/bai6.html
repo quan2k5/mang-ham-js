@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var array=[3,4,3,5,7,6,8,9,12,11,9,56,58,59,34,31,29,30];
+         for(let i=0;i<array.length;i++){
+            let random = Math.floor(Math.random() *(array.length-i)+i);
+            let temp=array[i];
+            array[i]=array[random];
+            array[random]=temp;
+         }
+         console.log(array);
+    </script>
+</body>
+</html>

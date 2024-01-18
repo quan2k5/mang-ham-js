@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkString(a,b){
+            let newArr=[];
+            let index=0;
+            for(let i=0;i<a.length;i++){
+                let k=0;
+            while(a[i].length>k){
+                var c="";
+                var check=false;
+                for(let j=k;j<a[i].length;j++){                
+                    c+=a[i][j];
+                    if(c==b){
+                        newArr[index]=a[i];
+                        index++;
+                        check=true;
+                        break;
+                    } 
+                }
+                if(check==true){
+                    break;
+                }
+                k++;        
+            }
+            }
+            return newArr;
+        }
+        var a=["abc","bcde","abbd","addeb","deea"];
+        var b=prompt("nhap 1 chuoi bat ky");
+        console.log(checkString(a,b));
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=[2,1,2,2,3,4,5,8,8,4,5,3,1,9,1,5,7,0];
+        for(let i=0;i<a.length;i++){
+            var check=true;
+            for(let j=0;j<a.length;j++){
+                if(a[i]==a[j] &&i!=j){
+                    check=false;
+                }
+            }
+            if(check==true){
+                console.log(a[i]);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
