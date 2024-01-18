@@ -6,15 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-         var array=[3,4,3,5,7,6,8,9,12,11,9,56,58,59,34,31,29,30];
-         for(let i=0;i<array.length;i++){
-            let random = Math.floor(Math.random() *(array.length-i)+i);
-            let temp=array[i];
-            array[i]=array[random];
-            array[random]=temp;
-         }
-         console.log(array);
+    <script>       
+            function changeWord(string) {
+            let sentence = string.toLowerCase().split(" ");
+            for(var i = 0; i< sentence.length; i++){
+                sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+            }
+            return sentence.join(" ");
+            }
+        var string="le anh quan";
+        console.log(changeWord(string));
     </script>
+    
 </body>
 </html>

@@ -7,18 +7,19 @@
 </head>
 <body>
     <script>
-        var array=[56,4,3,55,23,3,568,4578,5679,56,3,2,5,31,45676,7];
-        let min=array[0],max=array[0];
-        for(let i=0;i<array.length;i++){
-            if(max<array[i]){
-                max=array[i];
-            }
-            if(min>array[i]){
-                min=array[i];
+        function checkNumber(m){
+            if(m%2==0){
+                return "day la so chan";
+            }else{
+                return "day la so le";
             }
         }
-        console.log("so lon nhat",max);
-        console.log("so nho nhat",min);
-    </script>  
+        var a=+prompt("nhap so a");
+        var b=+prompt("nhap so b");
+        var c=+prompt("nhap so c");
+        console.log(checkNumber(a));     
+        console.log(checkNumber(b));
+        console.log(checkNumber(c));
+    </script>
 </body>
 </html>

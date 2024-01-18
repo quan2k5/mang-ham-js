@@ -7,51 +7,31 @@
 </head>
 <body>
     <script>
-        var array=["a","d","c","d","c","d","c","a","b","d","f","b","q"];
-        var count=[];
-        var index=0;
-        count[index]=0;
-        var max=0;
-        var newArray=[];
-        var maxArray=[];
-        var maxIndex;
-        var k=0;
-        var j=0;
-        var check=false;
-      while(array.length>j){
-        for(let i=j;i<array.length;i++){
-            newArray[k]=array[i];
-            k++;
-            count[index]++;
-            for(let m=0;m<newArray.length;m++){
-                if(newArray[m]==array[i+1] ){
-                    check=true;
-                    break;
-                }
-            }
-            if(check==true){
-                for(let m=0;m<count.length;m++){
-                    if(max<count[m]){
-                        maxIndex=0;
-                        max=count[m];
-                        maxArray=[];
-                        for(let n=0;n<newArray.length;n++){
-                            maxArray[maxIndex]=newArray[n];
-                           maxIndex++;
-                        }
+        function selectedArr(array){
+            let newArr=[];
+            let maxArr=[];
+            let max=0;
+            let index=0;
+            let total=0;
+            for(let i=0;i<array.length;i++){
+                if(array[i]>0 && i!=array.length-1){
+                    newArr.splice(index,0,array[i]);
+                    total+=array[i];
+                    index++;
+                }else{
+                    if(max<total){
+                        max=total;
+                        maxArr=newArr;
                     }
+                    newArr=[];    
+                    index=0;
+                    total=0;
                 }
-                index++;
-                count[index]=0;
-                check=false;
-                newArray=[];
-                k=0;
-                break;
             }
+            return maxArr;
         }
-        j++;
-      }
-      console.log(maxArray);            
+        var array=[2,4,5,7,8,-5,6,90,8,1,1,-2,1000,5,6,7];
+        console.log(selectedArr(array));
     </script>
 </body>
 </html>

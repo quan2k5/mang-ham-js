@@ -7,17 +7,20 @@
 </head>
 <body>
     <script>
-        var array=[3,4,3,5,7,6,8,9,12,11,9,56,58,59,34,31,29,30];
-        let k=1;
-        for(let i=0;i<array.length;i+=k){
-            if(array[i]%2!=0){
-                array.splice(i,1);
-                k=0;
-            }else{
-                k=1;
+        function checkString(arr){
+            let space=" ";
+            let total=arr.length;
+
+            for(let i=0;i<arr.length;i++){
+                if(arr[i]==space){
+                    total--;
+                }
+
             }
+            return total;
         }
-        console.log(array);
+        var arr="le anh quan";
+        console.log(" so ki tu khong tinh ky tu trong:",checkString(arr));
     </script>
 </body>
 </html>

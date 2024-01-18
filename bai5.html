@@ -7,19 +7,34 @@
 </head>
 <body>
     <script>
-        var a=[2,1,2,2,3,4,5,8,8,4,5,3,1,9,1,5,7,0];
-        for(let i=0;i<a.length;i++){
-            var check=true;
-            for(let j=0;j<a.length;j++){
-                if(a[i]==a[j] &&i!=j){
-                    check=false;
+        function checkString(a,b){
+            let newArr=[];
+            let index=0;
+            for(let i=0;i<a.length;i++){
+                let k=0;
+            while(a[i].length>k){
+                var c="";
+                var check=false;
+                for(let j=k;j<a[i].length;j++){                
+                    c+=a[i][j];
+                    if(c==b){
+                        newArr[index]=a[i];
+                        index++;
+                        check=true;
+                        break;
+                    } 
                 }
+                if(check==true){
+                    break;
+                }
+                k++;        
             }
-            if(check==true){
-                console.log(a[i]);
-                break;
             }
+            return newArr;
         }
+        var a=["abc","bcde","abbd","addeb","deea"];
+        var b=prompt("nhap 1 chuoi bat ky");
+        console.log(checkString(a,b));
     </script>
 </body>
 </html>
